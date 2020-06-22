@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cdc-crawler
+  name: cdc-crawler
+  namespace: optum-dock-core
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: cdc-crawler
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: cdc-crawler
+    spec:
+      containers:
+      - name: mongodb
+        image: docker.repo1.uhc.com/catalyst_rnd/cdc_crawler:v1.77
+        env:
+        - name: state
+          value: wisconsin
+        - name: elastic_server_host
+          value: 10.86.28.201
+        - name: elastic_username
+          value: elastic
+        - name: elastic_password
+          value: password
+        - name: elastic_port
+          value: "9201"
+        - name: ocr_subscription_key
+          value: 9894f9e2f6fb49b7b435bf530b00618e
+        - name: ocr_endpoint
+          value: https://image-reader.cognitiveservices.azure.com/
+        imagePullPolicy: "IfNotPresent"
+        resources:
+          limits:
+            cpu: "1"
+            memory: 2G
+          requests:
+            cpu: 250m
+            memory: 2G
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext:
+        runAsUser: 1000
+      terminationGracePeriodSeconds: 30
