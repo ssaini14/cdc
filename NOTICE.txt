@@ -9,10 +9,10 @@ Authors:
 ========
 
 @devasudan - Developer and Project lead
-Satinder Saini K  
+@ssaini14 - Satinder Saini K  
 Robert Walsh  
 @anshusahu - Himanshu Sahu 
-Sanjana Mukherjee
+@sanjanamukherjee - Sanjana Mukherjee
 @nuclode - ayush Rawat 
 @p-oshea - engineer and git/github
 
