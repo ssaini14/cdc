@@ -1,4 +1,4 @@
-# CDC Crawler
+# CDC Crisis Crawler
 
 ### Quick Start
 1. Clone the Repository
