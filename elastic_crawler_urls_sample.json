@@ -1,0 +1,101 @@
+{
+  "state": "iowa",
+  "state_urls": [
+    {
+      "url": "https://www.facebook.com/CGPublicHealth/#",
+      "county": "cerro gordo",
+      "contentType": "doh",
+      "channel": "facebook"
+    },
+    {
+      "url": "https://twitter.com/CGPublicHealth#",
+      "county": "cerro gordo",
+      "contentType": "doh",
+      "channel": "twitter"
+    },
+    {
+      "url": "http://www.cghealth.com/#",
+      "county": "cerro gordo",
+      "contentType": "doh",
+      "channel": "url"
+    },
+    {
+      "url": "http://www.linncounty.org/health#",
+      "county": "linn",
+      "contentType": "doh",
+      "channel": "url"
+    },
+    {
+      "url": "https://www.facebook.com/PolkCountyHealthDepartment/#",
+      "county": "polk",
+      "contentType": "doh",
+      "channel": "facebook"
+    },
+    {
+      "url": "https://twitter.com/polkcohealth#",
+      "county": "polk",
+      "contentType": "doh",
+      "channel": "twitter"
+    },
+    {
+      "url": "http://www.polkcountyiowa.gov/health#",
+      "county": "polk",
+      "contentType": "doh",
+      "channel": "url"
+    },
+    {
+      "url": "http://www.scottcountyiowa.com/#",
+      "county": "scott",
+      "contentType": "doh",
+      "channel": "url"
+    },
+    {
+      "url": "https://idph.iowa.gov/Emerging-Health-Issues/Novel-Coronavirus",
+      "county": "",
+      "contentType": "doh",
+      "channel": "url"
+    },
+    {
+      "url": "https://idph.iowa.gov/Emerging-Health-Issues/Novel-Coronavirus",
+      "county": "",
+      "contentType": "business",
+      "channel": "url"
+    },
+    {
+      "url": "https://facebook.com/IAGovernor",
+      "county": "",
+      "contentType": "gov",
+      "channel": "facebook"
+    },
+    {
+      "url": "https://twitter.com/IAGovernor",
+      "county": "",
+      "contentType": "gov",
+      "channel": "twitter"
+    },
+    {
+      "url": "https://governor.iowa.gov/",
+      "county": "",
+      "contentType": "gov",
+      "channel": "url"
+    },
+    {
+      "url": "https://governor.iowa.gov/executive-orders",
+      "county": "",
+      "contentType": "gov",
+      "channel": "url"
+    },
+    {
+      "url": "https://governor.iowa.gov/newsroom-view",
+      "county": "",
+      "contentType": "press",
+      "channel": "url"
+    },
+    {
+      "url": "https://www.iowa.gov/all-press-releases",
+      "county": "",
+      "contentType": "press",
+      "channel": "url"
+    }
+  ]
+}

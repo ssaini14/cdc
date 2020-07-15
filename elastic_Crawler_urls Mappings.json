@@ -1,0 +1,40 @@
+{
+  "settings": {
+    "index": {
+      "analysis": {
+        "analyzer": {
+          "analyzer_shingle": {
+            "tokenizer": "standard",
+            "filter": [
+              "lowercase",
+              "filter_shingle"
+            ]
+          }
+        },
+        "filter": {
+          "filter_shingle": {
+            "type": "shingle",
+            "max_shingle_size": 4,
+            "min_shingle_size": 2,
+            "output_unigrams": "true"
+          }
+        }
+      }
+    }
+  },"mappings": {
+      "properties": {
+        "state": {
+           "type": "keyword"
+          },
+        "state_urls": {
+           "type": "nested",
+           "properties":{
+              "url": {"type": "text"},
+              "county": {"type": "text"},
+             "contentType": {"type": "text"},
+             "channel": {"type": "text"}
+           }      
+        }
+      }
+    }
+}

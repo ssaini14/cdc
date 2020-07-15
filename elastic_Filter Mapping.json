@@ -1,0 +1,34 @@
+{
+      "settings": {
+        "index": {
+          "analysis": {
+            "analyzer": {
+              "analyzer_shingle": {
+                "tokenizer": "standard",
+                "filter": [
+                  "lowercase",
+                  "filter_shingle"
+                ]
+              }
+            },
+            "filter": {
+              "filter_shingle": {
+                "type": "shingle",
+                "max_shingle_size": 4,
+                "min_shingle_size": 2,
+                "output_unigrams": "true"
+              }
+            }
+          }
+        }
+      },"mappings": {
+            "properties": {
+            	"filter_type":{
+            		"type":"keyword"
+            	},
+            	"filter_values":{
+            		"type":"text"
+            	}
+            }
+        }
+    }

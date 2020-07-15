@@ -1,0 +1,95 @@
+{
+      "settings": {
+        "index": {
+          "analysis": {
+            "analyzer": {
+              "analyzer_shingle": {
+                "tokenizer": "standard",
+                "filter": [
+                  "lowercase",
+                  "filter_shingle"
+                ]
+              }
+            },
+            "filter": {
+              "filter_shingle": {
+                "type": "shingle",
+                "max_shingle_size": 4,
+                "min_shingle_size": 2,
+                "output_unigrams": "true"
+              }
+            }
+          }
+        }
+      },"mappings": {
+            "properties": {
+                "channel": {
+                    "type": "keyword"
+                },
+                "contentType": {
+                    "type": "keyword"
+                },
+                "contentdiff": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "context": {
+                    "type": "nested",
+                    "properties": {
+                        "data": {
+                            "type": "text"
+                        },
+                        "foundUseful": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "county": {
+                    "type": "keyword"
+                },
+                "createdatetime": {
+                    "type": "date"
+                },
+                "htmldiff": {
+                    "type": "text"
+                },
+                "state": {
+                    "type": "keyword"
+                },
+                "url": {
+                    "type": "keyword"
+                },
+                "title": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "previewText": {
+                    "type": "nested",
+                    "properties": {
+                        "description": {
+                            "type": "text"
+                        },
+                        "image": {
+                            "type": "text"
+                        },
+                        "title": {
+                            "type": "text"
+                        },
+                        "website": {
+                            "type": "text"
+                        }
+                    }
+                }
+            }
+        }
+    }
