@@ -3,7 +3,7 @@
 ### Quick Start
 1. Clone the Repository
 ```
-$ git clone https://github.optum.com/catalyst/cdc.git
+$ git clone https://github.com/Optum/cdc.git
 $ cd cdc
 ```
 
@@ -38,7 +38,9 @@ ocr_subscription_key=your_subscription_key
 ocr_endpoint=your_ocr_endpoint
 ```
 
-5. Run the crawler
+5. Create the indices in ElasticSearch, refer the elastic_*.json mappings and samples. Populate the data in those indices. Create state_* indices for each of the state, this is the index where the crawler will write the webpage delta.
+
+6. Run the crawler
 ```
 $ python code/changes.py
 ```
